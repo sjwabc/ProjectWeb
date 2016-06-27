@@ -5,9 +5,10 @@
 define(
     ["angular",
     "route-config",
-    "uiRoute"],
-    function(angular,routeConfig,uiRoute){
-        var app = angular.module("myApp", ["ui.router"]);
+    "uiRoute",
+    "angularCookies"],
+    function(angular,routeConfig){
+        var app = angular.module("myApp", ["ui.router","ngCookies"]);
         app.config(["$locationProvider",
                     "$controllerProvider",
                     "$compileProvider",
@@ -31,7 +32,7 @@ define(
                         if (routeConfig.states !== undefined) {
                             angular.forEach(routeConfig.states, function (route, state) {
                                 if (route.dependencies !== undefined && route.dependencies.length > 0) {
-                                    //route.resolve = resolve(route.dependencies);
+                                    route.resolve = resolve(route.dependencies);
                                 }
                                 $stateProvider.state(state, route);
                             });

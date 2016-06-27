@@ -1,0 +1,13 @@
+.homeDiv{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding : 0px;
+    background-color: #000000;
+}
+.header {
+    width: auto;
+    height: 20%;
+    background-color: #d5d5d5;
+    border: 1px #d5d5d5;
+}

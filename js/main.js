@@ -1,10 +1,10 @@
 /**
  * Created by sujiawei on 2016/6/24.
- * 1.ÅäÖÃÈ«¾ÖrequireJs£º
- *   1.1 shim ÓÃÓÚĞèÒªµ¼ÈëµÄJSÎªÓÃµ½define()¶¨ÒåÒÀÀµÊ¹ÓÃ,Èçangular¡¢bootstrapµ÷ÓÃÇ°ĞèÒªÒÀÀµjquery¡£
- *   1.2 priority ÓÃÓÚÓÅÏÈµ÷ÓÃ
- * 2.ÅäÖÃÈ«¾Öng-app£¬²¢ÔÚangularÆô¶¯
- * 2.ÊÖ¶¯µ÷ÓÃÆô¶¯angular.bootstrap(document,[app.name]);
+ * 1.é…ç½®å…¨å±€requireJsï¼š
+ *   1.1 shim ç”¨äºéœ€è¦å¯¼å…¥çš„JSä¸ºç”¨åˆ°define()å®šä¹‰ä¾èµ–ä½¿ç”¨,å¦‚angularã€bootstrapè°ƒç”¨å‰éœ€è¦ä¾èµ–jqueryã€‚
+ *   1.2 priority ç”¨äºä¼˜å…ˆè°ƒç”¨
+ * 2.é…ç½®å…¨å±€ng-appï¼Œå¹¶åœ¨angularå¯åŠ¨
+ * 2.æ‰‹åŠ¨è°ƒç”¨å¯åŠ¨angular.bootstrap(document,[app.name]);
  */
 
 require.config({
@@ -13,6 +13,7 @@ require.config({
         "jquery" : "lib/jquery/jquery-2.2.3",
         "angular" : "lib/angular-v1.5.7/angular.min",
         "uiRoute" : "lib/ui-route-v0.2.18/angular-ui-router.min",
+        "angularCookies" : "lib/angular-v1.5.7/angular-cookies.min",
         "bootstrap" : "lib/bootstrap-v3.3.5/bootstrap.min"
     },
     shim : {
@@ -21,12 +22,13 @@ require.config({
             "exports" : "angular"
         },
         "uiRoute" :  ["angular"],
+        "angularCookies" : ["angular"],
         "bootstrap" : {
             "deps" :["jquery"],
             "exports" : "bootstrap"
         }
     },
-    priority : ["jquery","angular"]  //ÓÅÏÈ
+    priority : ["jquery","angular"]  //ä¼˜å…ˆ
 });
 
 

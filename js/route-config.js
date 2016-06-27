@@ -3,7 +3,7 @@
  */
 define([],function(){
     return {
-        "defaultUrl" : "/login",
+        "defaultUrl" : "/home",
         "states"  : {
             "login" : {
                 url : "/login",
@@ -13,9 +13,9 @@ define([],function(){
                 ]
             },
             "home" : {
-                abstract: true,
-                url : "/login",
-                templateUrl : "views/login.html",
+                //abstract: true,
+                url : "/home",
+                templateUrl : "views/home.html",
                 dependencies: [
                     "controllers/HomeController"
                 ]

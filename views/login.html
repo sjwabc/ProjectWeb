@@ -1,2 +1,18 @@
-<div ng-controller="LoginController">
+<meta charset="utf-8">
+<div ng-controller="LoginController" class="loginDiv">
+    <div class="container">
+        <form class="form-signin">
+            <h2 class="form-signin-heading" ng-bind="title"></h2>
+            <label for="inputEmail" class="sr-only" ng-bind="loginUser"></label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="{{loginUserPrompt}}" required autofocus>
+            <label for="inputPassword" class="sr-only" ng-bind="loginPassword"></label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="{{loginPasswordPrompt}}" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">{{loginRememberMe}}
+                </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" ng-bind="loginCommit"></button>
+        </form>
+    </div> <!-- /container -->
 </div>
