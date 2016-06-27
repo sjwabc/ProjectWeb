@@ -6,16 +6,9 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>index</title>
-    <script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
 </head>
-<body ng-app="myApp">
-    <div data-ng-view></div>
-    <div>
-        <p id="test"></p>
-    </div>
-    <div ng-controller="myContrl">
-        <input type="text" id="test1" ng-model="name"/>
-        <p>{{name}}</p>
-    </div>
+<body>
+    <div data-ui-view></div>
 </body>
+<script type="text/javascript" src="js/lib/require/require.js" data-main="js/main"></script>
 </html>
