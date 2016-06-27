@@ -5,7 +5,7 @@ define(["app",
         "services/LoginServices"],
     function(app){
 
-        //Êı¾İ³õÊ¼»¯
+        //æ•°æ®åˆå§‹åŒ–
         function init(scope,servies){
             scope.title = servies.pageParam.title;
             scope.loginUser = servies.pageParam.loginUser;
