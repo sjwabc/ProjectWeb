@@ -6,14 +6,15 @@ define(["app",
     function(app){
 
         //数据初始化
-        function init(scope,servies){
-            scope.title = servies.pageParam.title;
-            scope.loginUser = servies.pageParam.loginUser;
-            scope.loginUserPrompt = servies.pageParam.loginUserPrompt;
-            scope.loginPassword = servies.pageParam.loginPassword;
-            scope.loginPasswordPrompt = servies.pageParam.loginPasswordPrompt;
-            scope.loginCommit = servies.pageParam.loginCommit;
-            scope.loginRememberMe = servies.pageParam.loginRememberMe;
+        function init(scope,services){
+            scope.title = services.pageParam.title;
+            scope.loginUser = services.pageParam.loginUser;
+            scope.loginUserPrompt = services.pageParam.loginUserPrompt;
+            scope.loginPassword = services.pageParam.loginPassword;
+            scope.loginPasswordPrompt = services.pageParam.loginPasswordPrompt;
+            scope.loginCommit = services.pageParam.loginCommit;
+            scope.loginRememberMe = services.pageParam.loginRememberMe;
+            scope.loginVerify = services.pageParam.loginVerify;
         }
     var deps = ["$scope","LoginServices"];
     function controller($scope,loginServices){
