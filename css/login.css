@@ -17,10 +17,13 @@
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
-    margin-bottom: 10px;
+    margin-bottom: 40px;
 }
 .form-signin .checkbox {
-    margin-left: 5px; 
+    margin-left: 5px;
+    font-weight: normal;
+    color: #4a576a;
+    font-size: 13px;
     font-weight: normal;
 }
 .form-signin .form-control {
@@ -40,7 +43,23 @@
     width : 150px;
     /*float : left;*/
 }
-#verImages{
+#verImages {
     margin-left: 180px; 
     width: 120px;
+}
+.remember {
+    width: 150px;
+    float: left;
+    font-size: 12px;
+}
+.autoSubmit{
+    width: 140px;
+    float: left;
+    text-align: right;
+}
+.msgError{
+    margin-top : 10px;
+    font-size:10px;
+    color : red;
+    text-align: center;
 }
