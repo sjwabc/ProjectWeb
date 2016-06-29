@@ -34,17 +34,16 @@ define(["app"], function(app) {
             "msgError": msgError,
             "magErrorFlag": magErrorFlag,
             "rememberMeFlag": function() {
-                return $cookieStore.get(rememberMeFlag) === "undefined" ? false : $cookieStore.get(rememberMeFlag);
+                return $cookieStore.get(rememberMeFlag) === undefined ? false : $cookieStore.get(rememberMeFlag);
             },
             "autoSubmitFlag": function() {
-                return $cookieStore.get(autoSubmitFlag) === "undefined" ? false : $cookieStore.get(autoSubmitFlag);
+                return $cookieStore.get(autoSubmitFlag) === undefined ? false : $cookieStore.get(autoSubmitFlag);
             },
             "userName": function() {
-                console.log($cookieStore.get(userName));
-                $cookieStore.get(userName) === "undefined" ? "" : $cookieStore.get(userName);
+                return $cookieStore.get(userName) === undefined ? "" : $cookieStore.get(userName);
             },
             "password": function() {
-                $cookieStore.get(passWord) === "undefined" ? "" : $cookieStore.get(passWord)
+                return $cookieStore.get(passWord) === undefined ? "" : $cookieStore.get(passWord)
             }
         };
         //保存登陆信息
@@ -64,7 +63,12 @@ define(["app"], function(app) {
         //this.clearAutoStatus = function(){
         //    $cookieStore.remove(autoSubmitFlag);
         //};
-        this.submit = function(userName, password, remem, auto) {
+        this.submit = function(loginVo) {
+
+            var userName = loginVo.loginUser;
+            var password = loginVo.loginPassword;
+            var remem = loginVo.rememberMe;
+            var auto = loginVo.autoSubmit;
             if ((userName != null && userName == "sujiawei@ygsoft.com") &&
                 (password != null && password == "1234")) {
                 //保存登陆信息

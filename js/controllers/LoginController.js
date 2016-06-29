@@ -28,11 +28,6 @@ define(["app",
                 "autoSubmit": services.pageParam.autoSubmitFlag(),
             };
             console.log(scope.loginVo);
-            console.log("scope.loginVo.loginUser:" + services.pageParam.userName());
-            console.log("scope.loginVo.loginUser:" + scope.loginVo["loginUser"]);
-            console.log("scope.loginVo.loginPassword:" + scope.loginVo.loginPassword);
-            console.log("scope.loginVo.rememberMe:" + scope.loginVo.rememberMe);
-            console.log("scope.loginVo.autoSubmit:" + scope.loginVo.autoSubmit);
         };
 
         //controller
@@ -42,9 +37,8 @@ define(["app",
             init($scope, loginServices);
 
             $scope.submit = function() {
-                var userName = $scope.loginVo.loginUser;
-                var password = $scope.loginVo.loginPassword;
-                $scope.msgErrorFlag = loginServices.submit(userName, password);
+                console.log($scope.loginVo.autoSubmit);
+                $scope.msgErrorFlag = loginServices.submit($scope.loginVo);
             };
         };
         controller.$inject = deps;
