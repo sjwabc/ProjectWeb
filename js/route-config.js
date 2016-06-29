@@ -1,21 +1,21 @@
 /**
  * Created by liyueying on 2016-06-25.
  */
-define([],function(){
+define([], function() {
     return {
-        "defaultUrl" : "/home",
-        "states"  : {
-            "login" : {
-                url : "/login",
-                templateUrl : "views/login.html",
+        "defaultUrl": "/home",
+        "states": {
+            "login": {
+                url: "/login",
+                templateUrl: "views/login.html",
                 dependencies: [
                     "controllers/LoginController"
                 ]
             },
-            "home" : {
+            "home": {
                 //abstract: true,
-                url : "/home",
-                templateUrl : "views/home.html",
+                url: "/home",
+                templateUrl: "views/home.html",
                 dependencies: [
                     "controllers/HomeController"
                 ]

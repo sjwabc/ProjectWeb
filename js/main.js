@@ -8,30 +8,30 @@
  */
 
 require.config({
-    baseUrl : "js",
-    paths : {
-        "jquery" : "lib/jquery/jquery-2.2.3",
-        "angular" : "lib/angular-v1.5.7/angular.min",
-        "uiRoute" : "lib/ui-route-v0.2.18/angular-ui-router.min",
-        "angularCookies" : "lib/angular-v1.5.7/angular-cookies.min",
-        "bootstrap" : "lib/bootstrap-v3.3.5/bootstrap.min"
+    baseUrl: "js",
+    paths: {
+        "jquery": "lib/jquery/jquery-2.2.3",
+        "angular": "lib/angular-v1.5.7/angular.min",
+        "uiRoute": "lib/ui-route-v0.2.18/angular-ui-router.min",
+        "angularCookies": "lib/angular-v1.5.7/angular-cookies.min",
+        "bootstrap": "lib/bootstrap-v3.3.5/bootstrap.min"
     },
-    shim : {
-        "angular" : {
-            "deps" : ["jquery"],
-            "exports" : "angular"
+    shim: {
+        "angular": {
+            "deps": ["jquery"],
+            "exports": "angular"
         },
-        "uiRoute" :  ["angular"],
-        "angularCookies" : ["angular"],
-        "bootstrap" : {
-            "deps" :["jquery"],
-            "exports" : "bootstrap"
+        "uiRoute": ["angular"],
+        "angularCookies": ["angular"],
+        "bootstrap": {
+            "deps": ["jquery"],
+            "exports": "bootstrap"
         }
     },
-    priority : ["jquery","angular"]  //优先
+    priority: ["jquery", "angular"] //优先
 });
 
 
-require(['app','angular',"uiRoute"],function(app,angular,uiRoute){
-    angular.bootstrap(document,[app.name]);
+require(['app', 'angular', "uiRoute"], function(app, angular, uiRoute) {
+    angular.bootstrap(document, [app.name]);
 });
