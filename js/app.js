@@ -6,7 +6,8 @@ define(
     ["angular",
         "route-config",
         "uiRoute",
-        "angularCookies"
+        "angularCookies",
+        "bootstrapJs"
     ],
     function(angular, routeConfig) {
         var app = angular.module("myApp", ["ui.router", "ngCookies"]);

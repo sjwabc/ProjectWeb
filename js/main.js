@@ -14,7 +14,8 @@ require.config({
         "angular": "lib/angular-v1.5.7/angular.min",
         "uiRoute": "lib/ui-route-v0.2.18/angular-ui-router.min",
         "angularCookies": "lib/angular-v1.5.7/angular-cookies.min",
-        "bootstrap": "lib/bootstrap-v3.3.5/bootstrap.min"
+        "bootstrapJs": "lib/bootstrap-v3.3.5/js/bootstrap",
+        "metisMenu": "lib/metisMenu/metisMenu"
     },
     shim: {
         "angular": {
@@ -23,15 +24,13 @@ require.config({
         },
         "uiRoute": ["angular"],
         "angularCookies": ["angular"],
-        "bootstrap": {
-            "deps": ["jquery"],
-            "exports": "bootstrap"
-        }
+        "bootstrapJs": ["jquery"],
+        "metisMenu" : ["jquery"]
     },
     priority: ["jquery", "angular"] //优先
 });
 
 
-require(['app', 'angular', "uiRoute"], function(app, angular, uiRoute) {
+require(['app'], function(app) {
     angular.bootstrap(document, [app.name]);
 });

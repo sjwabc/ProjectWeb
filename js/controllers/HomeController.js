@@ -1,7 +1,7 @@
 /**
  * Created by liyueying on 2016-06-27.
  */
-define(["app"],function(app){
+define(["app","metisMenu"],function(app){
     var deps = ["$scope"];
     function controller($scope){
 
